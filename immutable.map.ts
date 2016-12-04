@@ -1,6 +1,6 @@
 import {Map} from "immutable";
 
-export class immutableMap {
+export class ImmutableMap {
     private values: Object;
     constructor(values: Object) {
         this.values = Map(values);

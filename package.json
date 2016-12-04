@@ -2,14 +2,17 @@
   "name": "node-ts",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "dependencies": {
+    "bluebird": "^3.4.6",
     "immutable": "^3.8.1",
     "xo": "^0.17.1"
   },
   "devDependencies": {
     "express": "^4.14.0",
+    "express-sequelize": "0.0.4",
+    "psql": "0.0.1",
     "sequelize": "^3.27.0",
+    "sequelize-cli": "^2.4.0",
     "ts-node": "^1.7.0",
     "typescript": "^2.0.10",
     "typings": "^2.0.0"

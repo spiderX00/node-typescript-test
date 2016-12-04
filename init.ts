@@ -1,6 +1,6 @@
 import express = require("express");
-import {immutableMap} from "./immutable.map";
-import {SequelizeModule} from "./sequelize";
+import {ImmutableMap} from "./immutable.map";
+import {Storage} from "./storage";
 
 const TIMEOUT = 1000;
 const PORT = process.env.PORT || 3000;
@@ -13,7 +13,7 @@ const delay = async (milliseconds: number) => {
 
 const main = () => {
     let object = { a: 10, b: 20, c: 30 };
-    let objectMap = new immutableMap(object);
+    let objectMap = new ImmutableMap(object);
     const timeout = async (offset) => {
         await delay(TIMEOUT + offset);
         console.info("delay...", objectMap.get())

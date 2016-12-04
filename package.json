@@ -9,6 +9,7 @@
   },
   "devDependencies": {
     "express": "^4.14.0",
+    "sequelize": "^3.27.0",
     "ts-node": "^1.7.0",
     "typescript": "^2.0.10",
     "typings": "^2.0.0"

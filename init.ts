@@ -13,10 +13,13 @@ const delay = async (milliseconds: number) => {
 const main = () => {
     let object = { a: 10, b: 20, c: 30 };
     let objectMap = new immutableMap(object);
-    setInterval(async () => {
-        await delay(TIMEOUT);
+    let timeout = async (offset) => {
+        await delay(TIMEOUT + offset);
         console.info("delay...", objectMap.get())
-    }, TIMEOUT);
+    };
+    for (let i = 0; i <= 10; i++) {
+        timeout(i * TIMEOUT);
+    }
 };
 
 const app = express();

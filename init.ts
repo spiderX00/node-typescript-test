@@ -1,9 +1,10 @@
 import express = require("express");
+const properties = require("./properties");
 import {ImmutableMap} from "./immutable.map";
 import {Storage} from "./storage";
 
 const TIMEOUT = 1000;
-const PORT = process.env.PORT || 3000;
+const PORT = properties.port;
 
 const delay = async (milliseconds: number) => {
     return new Promise<void>(resolve => {
